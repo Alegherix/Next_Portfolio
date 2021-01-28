@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  p {
+    @apply text-teeth;
+  }
+  span,
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-ocean;
+  }
+}
