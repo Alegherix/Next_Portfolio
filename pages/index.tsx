@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Project from '../components/Project';
 import Portfolio from '../components/Portfolio';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const techs = ['Next.js ', 'Tailwind'];
@@ -17,6 +18,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Portfolio />
+        <Footer />
       </Layout>
     </div>
   );
