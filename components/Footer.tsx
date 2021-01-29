@@ -39,7 +39,7 @@ interface SocialMedia {
 const Media: React.FC<SocialMedia> = ({ Icon, url }) => {
   return (
     <a
-      className="transition duration-500 ease-in-out transform  hover:bg-ocean hover:scale-90"
+      className="transition duration-300 ease-out transform  hover:bg-ocean hover:scale-90"
       href={url}
     >
       <div className="w-12 h-12 bg-evening flex items-center justify-center">
@@ -62,8 +62,9 @@ const Footer: React.FC<FooterProps> = () => {
             return <Media key={icon.url} Icon={icon.Icon} url={icon.url} />;
           })}
         </div>
-        <p className="text-center">
-          Martin Hansson &copy; <span> {new Date().getFullYear()}</span>
+        <p className="text-center mb-4">
+          Martin Hansson &copy;{' '}
+          <span className="font-normal"> {new Date().getFullYear()}</span>
         </p>
       </div>
     </>

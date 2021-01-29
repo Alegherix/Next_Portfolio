@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import Wrapper from '../components/Wrapper';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Project from '../components/Project';
@@ -16,13 +16,13 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Wrapper>
         <Navbar />
         <Hero />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </Layout>
+      </Wrapper>
+      <Portfolio />
+      <Contact />
+      <Footer />
     </div>
   );
 }

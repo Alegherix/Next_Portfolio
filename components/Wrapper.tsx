@@ -2,7 +2,7 @@ import React from 'react';
 
 interface LayoutProps {}
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Wrapper: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <div className="px-8 bg-evening max-w-screen-2xl mx-auto">{children}</div>
@@ -10,4 +10,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;
+export default Wrapper;

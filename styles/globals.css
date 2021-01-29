@@ -1,3 +1,45 @@
-body {
-  background-color: #1f2833;
+@tailwind base;
+@tailwind components;
+@font-face {
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(/fonts/Spartan-VariableFont_wght.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+    @apply bg-evening;
+  }
+  h1 {
+    @apply text-2xl;
+  }
+  p,
+  label {
+    @apply text-teeth;
+  }
+  span,
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold;
+    @apply text-ocean;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply border-2 border-ocean rounded-md text-teeth px-4 py-2 self-end hover:bg-drapes transition ease-out duration-200;
+  }
+
+  .error {
+    @apply mt-2 font-normal tracking-wide;
+  }
 }
