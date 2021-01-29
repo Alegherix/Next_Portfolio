@@ -6,7 +6,7 @@ interface PortfolioProps {}
 const Portfolio: React.FC<PortfolioProps> = ({}) => {
   return (
     <>
-      <div className="p-8 bg-drapes">
+      <div id="portfolio" className="p-8 bg-drapes">
         <div className="max-w-screen-2xl mx-auto">
           <h2 className="text-4xl mb-20 font-bold">Featured Projects</h2>
           <Project

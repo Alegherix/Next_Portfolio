@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ["'Spartan'", ...fontFamily.sans],
       },
+      opacity: {
+        3: '0.03',
+      },
     },
     colors: {
       night: '#0B0C10',
@@ -21,7 +24,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['hover', 'focus', 'group-hover'],
+    },
   },
   plugins: [],
 };

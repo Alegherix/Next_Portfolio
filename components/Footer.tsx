@@ -7,6 +7,15 @@ import {
   FaInstagram,
   FaYoutube,
 } from 'react-icons/fa';
+import * as Scroll from 'react-scroll';
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from 'react-scroll';
 
 interface FooterProps {
   //   medias: SocialMedia[];
@@ -49,25 +58,38 @@ const Media: React.FC<SocialMedia> = ({ Icon, url }) => {
   );
 };
 
+function scrollToTop() {
+  scroll.scrollToTop();
+}
+
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <>
-      <div className="flex items-center flex-col bg-drapes relative">
-        <button className="absolute -top-6 w-12 h-12 bg-giant flex items-center justify-center flex-col mb-8 transition duration-300 ease-in-out hover:bg-blood">
-          <FaChevronUp color="#fff" fontSize="1.2rem" />
-          <FaChevronUp color="#fff" fontSize="1.2rem" />
-        </button>
-        <div className="flex gap-12 mb-8 mt-16 ">
-          {icons.map((icon) => {
-            return <Media key={icon.url} Icon={icon.Icon} url={icon.url} />;
-          })}
-        </div>
-        <p className="text-center mb-4">
-          Martin Hansson &copy;{' '}
-          <span className="font-normal"> {new Date().getFullYear()}</span>
-        </p>
+    <div className="flex items-center flex-col bg-drapes relative">
+      <button
+        onClick={scrollToTop}
+        className="group absolute -top-7 w-12 h-14 bg-giant flex items-center justify-center flex-col mb-8 transition duration-300 ease-in-out hover:bg-blood"
+      >
+        <FaChevronUp
+          className="group-hover:animate-bounce"
+          color="#fff"
+          fontSize="1.2rem"
+        />
+        <FaChevronUp
+          className="group-hover:animate-bounce"
+          color="#fff"
+          fontSize="1.2rem"
+        />
+      </button>
+      <div className="flex gap-12 mb-12 mt-20 ">
+        {icons.map((icon) => {
+          return <Media key={icon.url} Icon={icon.Icon} url={icon.url} />;
+        })}
       </div>
-    </>
+      <p className="text-center mb-4">
+        Martin Hansson &copy;{' '}
+        <span className="font-normal"> {new Date().getFullYear()}</span>
+      </p>
+    </div>
   );
 };
 

@@ -31,8 +31,8 @@ const Project: React.FC<ProjectProps> = ({
           height={500}
         />
         <section className="max-w-3xl">
-          <div className="flex items-center gap-3">
-            <h3 className="text-3xl mb-2 font-bold">{name}</h3>
+          <div className="flex items-center gap-3 mb-2">
+            <h3 className="text-3xl font-bold">{name}</h3>
             <a
               className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
               href={github}
