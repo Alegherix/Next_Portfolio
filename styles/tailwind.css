@@ -6,7 +6,8 @@
   h1 {
     @apply text-2xl;
   }
-  p {
+  p,
+  label {
     @apply text-teeth;
   }
   span,

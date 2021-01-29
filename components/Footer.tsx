@@ -59,7 +59,7 @@ const Footer: React.FC<FooterProps> = () => {
         </button>
         <div className="flex gap-12 mb-8 mt-16 ">
           {icons.map((icon) => {
-            return <Media Icon={icon.Icon} url={icon.url} />;
+            return <Media key={icon.url} Icon={icon.Icon} url={icon.url} />;
           })}
         </div>
         <p className="text-center">
