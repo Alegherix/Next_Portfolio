@@ -30,6 +30,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
               <input
                 className="p-1 rounded-sm"
                 name="name"
+                id="name"
                 ref={register({ required: true })}
               />
               {errors.name && (
@@ -43,6 +44,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
               <input
                 className="p-1 rounded-sm"
                 name="mail"
+                id="mail"
                 ref={register({ required: true })}
               />
               {errors.mail && (
@@ -59,6 +61,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
               ref={register({ required: true })}
               rows={10}
               name="message"
+              id="message"
             />
             {errors.message && (
               <span className="error">This field is required</span>

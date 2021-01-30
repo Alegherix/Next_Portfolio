@@ -7,7 +7,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
   return (
     <>
       <div id="portfolio" className="p-8 bg-drapes">
-        <div className="max-w-screen-2xl mx-auto">
+        <div className="max-w-screen-2xl mx-auto mb-20">
           <h2 className="text-4xl mb-20 font-bold">Featured Projects</h2>
           <Project
             description="This is a hobby project of mine which I started working on when I had a hard time finding a website which would help me create a framework for reaching personal goals."

@@ -7,6 +7,8 @@ import Portfolio from '../components/Portfolio';
 import Footer from '../components/Footer';
 import React from 'react';
 import Contact from '../components/Contact';
+import PageTransition from '../components/PageTransition';
+import About from '../components/About';
 
 export default function Home() {
   const techs = ['Next.js ', 'Tailwind'];
@@ -20,7 +22,9 @@ export default function Home() {
         <Navbar />
         <Hero />
       </Wrapper>
+      <About />
       <Portfolio />
+      <PageTransition />
       <Contact />
       <Footer />
     </div>

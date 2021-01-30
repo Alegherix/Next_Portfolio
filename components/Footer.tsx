@@ -67,18 +67,10 @@ const Footer: React.FC<FooterProps> = () => {
     <div className="flex items-center flex-col bg-drapes relative">
       <button
         onClick={scrollToTop}
-        className="group absolute -top-7 w-12 h-14 bg-giant flex items-center justify-center flex-col mb-8 transition duration-300 ease-in-out hover:bg-blood"
+        className=" absolute -top-7 w-12 h-14 bg-giant flex items-center justify-center flex-col mb-8 transition duration-300 ease-in-out hover:bg-blood"
       >
-        <FaChevronUp
-          className="group-hover:animate-bounce"
-          color="#fff"
-          fontSize="1.2rem"
-        />
-        <FaChevronUp
-          className="group-hover:animate-bounce"
-          color="#fff"
-          fontSize="1.2rem"
-        />
+        <FaChevronUp color="#fff" fontSize="1.2rem" />
+        <FaChevronUp color="#fff" fontSize="1.2rem" />
       </button>
       <div className="flex gap-12 mb-12 mt-20 ">
         {icons.map((icon) => {

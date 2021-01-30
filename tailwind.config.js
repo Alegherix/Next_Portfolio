@@ -11,11 +11,27 @@ module.exports = {
       opacity: {
         3: '0.03',
       },
+      zIndex: {
+        1: '1',
+      },
+      keyframes: {
+        bouncy: {
+          '0%, 100%': {
+            transform: 'translateY(0%)',
+          },
+          '50%': { transform: 'translateY(15%)' },
+        },
+      },
+      animation: {
+        bouncy: 'bouncy 0.7s ease-in-out infinite;',
+      },
     },
+
     colors: {
       night: '#0B0C10',
       evening: '#1F2833',
       drapes: '#2E3D4F',
+      moonlight: '#243141',
       teeth: '#C5C6C7',
       ocean: '#66FCF1',
       giant: '#FC0E49',

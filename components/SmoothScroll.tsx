@@ -34,7 +34,7 @@ export const SmoothScrollButton: React.FC<IScrollToButton> = ({
     <Link className="cursor-pointer p-2" to={to} smooth={true} duration={500}>
       <button className="group btn px-4 py-2 flex items-center gap-4">
         {text}
-        <Icon className="group-hover:animate-bounce" size="1.2rem" />
+        <Icon className="group-hover:animate-bouncy" size="1.2rem" />
       </button>
     </Link>
   );
