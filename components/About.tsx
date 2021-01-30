@@ -3,6 +3,8 @@ import { IconType } from 'react-icons/lib';
 import { AiFillSafetyCertificate, AiOutlineCodepen } from 'react-icons/ai';
 import { SiTypescript } from 'react-icons/si';
 import Wrapper from './Wrapper';
+import Image from 'next/image';
+import { FaGlobe } from 'react-icons/fa';
 
 interface IPriority {
   Icon: IconType;
@@ -12,12 +14,16 @@ interface IPriority {
 
 const Priority: React.FC<IPriority> = ({ Icon, title, body }) => {
   return (
-    <div className="p-6 flex flex-col items-center flex-wrap">
+    // Testa ta bort fast w och height. på text<
+
+    <div className="flex flex-col items-center">
       <div className="mb-3 rounded-full h-24 w-24 bg-evening flex items-center justify-center">
         <Icon color="white" size="3rem" />
       </div>
-      <p className="text-2xl font-bold tracking-wide text-ocean">{title}</p>
-      <p className="tracking-wide">{body}</p>
+      <p className="text-lg font-bold tracking-wide text-ocean xl:text-xl">
+        {title}
+      </p>
+      <p className="text-xs tracking-wide md:text-base">{body}</p>
     </div>
   );
 };
@@ -42,29 +48,41 @@ const priorities: Array<IPriority> = [
       'Security in applications to ensure safety and prevent unauthorized access is one of my greatest priorities. ',
   },
   {
-    Icon: AiFillSafetyCertificate,
-    title: 'safety',
+    Icon: FaGlobe,
+    title: 'Responsive',
     body:
-      'I’m a big proponent of always writing typesafe code. Needless to say, I love Typescript!',
+      'I strive towards always making sure the code I write is responsive for all types of layout to ensure accessibility for all users!',
   },
 ];
 
 const About: React.FC = () => {
   return (
-    <div className="bg-moonlight p-6">
+    <div id="about" className="bg-moonlight pt-8">
       <Wrapper color="bg-moonlight">
         <h2 className="text-center text-5xl mt-8 mb-3">About me</h2>
-        <div className="h-1 w-60 bg-teeth mx-auto mb-8"></div>
-        <div className="flex mb-20">
+        <div className="h-1 w-60 bg-teeth mx-auto mb-12"></div>
+        <div className="grid grid-cols-2 gap-x-2 gap-y-8 justify-items-center lg:grid-cols-4 lg:gap-x-4">
           {priorities.map(({ Icon, title, body }) => {
             return (
               <Priority key={title} Icon={Icon} body={body} title={title} />
             );
           })}
         </div>
-        <div className="flex justify-evenly gap-48">
-          <div className="w-full p-6">
-            <h4 className="text-3xl">Who am I?</h4>
+
+        <div className="mt-12 flex gap-8 flex-col-reverse md:flex-row md:justify-center md:gap-6 pb-16 lg:mt-20">
+          <div className="flex justify-center w-full h-full md:w-80 md:h-80">
+            <Image
+              className="rounded-md"
+              src="/portfolioPic.avif"
+              width={300}
+              height={300}
+              quality={100}
+            />
+          </div>
+          <div className="w-full md:w-96">
+            <h4 className="text-2xl text-center md:text-4xl md:text-left">
+              Who am I?
+            </h4>
             <p className="mb-6 leading-8">
               My name is Martin, I’m a Webdev student currently studying at{' '}
               <span className="text-hearth">Yrgo</span>. At heart I’m a tech
@@ -75,7 +93,6 @@ const About: React.FC = () => {
               <span>Serverless</span>.
             </p>
           </div>
-          <div className="h-64 w-64 w-full bg-night "></div>
         </div>
       </Wrapper>
     </div>

@@ -8,6 +8,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     <nav className="pt-8 flex justify-between text-ocean h-16 relative z-10">
       <p className="text-xl font-bold text-ocean">Martin Hansson</p>
       <ul className="flex gap-8 mr-4">
+        <SmoothScroll text="About" to="about" />
         <SmoothScroll text="Portfolio" to="portfolio" />
         <SmoothScroll text="Contact me" to="contact" />
       </ul>

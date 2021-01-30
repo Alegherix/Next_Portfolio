@@ -11,7 +11,7 @@ function Hero() {
       >
         <Image
           className="absolute opacity-3"
-          src="/hero.jpg"
+          src="/hero.avif"
           layout="fill"
           alt="background image of computer and coffee"
           priority={true}
