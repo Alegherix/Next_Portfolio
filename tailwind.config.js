@@ -25,6 +25,9 @@ module.exports = {
       animation: {
         bouncy: 'bouncy 0.7s ease-in-out infinite;',
       },
+      spacing: {
+        100: '26rem',
+      },
     },
 
     colors: {

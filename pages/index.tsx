@@ -23,8 +23,9 @@ export default function Home() {
         <Hero />
       </Wrapper>
       <About />
-      <Portfolio />
       <PageTransition />
+      <Portfolio />
+      {/* <PageTransition /> */}
       <Contact />
       <Footer />
     </div>

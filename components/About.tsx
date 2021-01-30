@@ -5,6 +5,7 @@ import { SiTypescript } from 'react-icons/si';
 import Wrapper from './Wrapper';
 import Image from 'next/image';
 import { FaGlobe } from 'react-icons/fa';
+import { useWindowSize } from './UseWindow';
 
 interface IPriority {
   Icon: IconType;
@@ -56,6 +57,8 @@ const priorities: Array<IPriority> = [
 ];
 
 const About: React.FC = () => {
+  const { width } = useWindowSize();
+
   return (
     <div id="about" className="bg-moonlight pt-8">
       <Wrapper color="bg-moonlight">
@@ -73,9 +76,9 @@ const About: React.FC = () => {
           <div className="flex justify-center w-full h-full md:w-80 md:h-80">
             <Image
               className="rounded-md"
-              src="/portfolioPic.avif"
-              width={300}
-              height={300}
+              src="/jag.avif"
+              width={width < 768 ? 250 : 330}
+              height={250}
               quality={100}
             />
           </div>
