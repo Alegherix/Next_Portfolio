@@ -6,6 +6,7 @@ import Wrapper from './Wrapper';
 import Image from 'next/image';
 import { FaGlobe } from 'react-icons/fa';
 import { useWindowSize } from './UseWindow';
+import { motion } from 'framer-motion';
 
 interface IPriority {
   Icon: IconType;
@@ -15,8 +16,6 @@ interface IPriority {
 
 const Priority: React.FC<IPriority> = ({ Icon, title, body }) => {
   return (
-    // Testa ta bort fast w och height. på text<
-
     <div className="flex flex-col items-center">
       <div className="mb-3 rounded-full h-24 w-24 bg-evening flex items-center justify-center">
         <Icon color="white" size="3rem" />
@@ -60,10 +59,14 @@ const About: React.FC = () => {
   const { width } = useWindowSize();
 
   return (
-    <div id="about" className="bg-moonlight pt-8">
+    <div id="about" className="bg-moonlight pt-8 md:pt-12">
       <Wrapper color="bg-moonlight">
         <h2 className="text-center text-5xl mt-8 mb-3">About me</h2>
-        <div className="h-1 w-60 bg-teeth mx-auto mb-12"></div>
+        <motion.div
+          initial={{ x: '-100vw' }}
+          animate={{ x: 0 }}
+          className="h-1 w-60 bg-teeth mx-auto mb-16"
+        ></motion.div>
         <div className="grid grid-cols-2 gap-x-2 gap-y-8 justify-items-center lg:grid-cols-4 lg:gap-x-4">
           {priorities.map(({ Icon, title, body }) => {
             return (
@@ -92,7 +95,7 @@ const About: React.FC = () => {
               nerd who loves building new and exciting projects! I spend most of
               my spare time coding on hobby projects and learning new
               technologies. As for favorite tech, I’m very passionate about{' '}
-              <span>GraphQL</span>,<span>JAMstack</span> and{' '}
+              <span>GraphQL</span>, <span>JAMstack</span> and{' '}
               <span>Serverless</span>.
             </p>
           </div>

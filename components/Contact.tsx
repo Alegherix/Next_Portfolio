@@ -15,7 +15,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
 
   return (
     <>
-      <div className="my-36 flex items-center flex-col">
+      <div className="my-36 flex items-center flex-col ">
         <h2 className="text-3xl font-bold mb-6">Get in touch with me</h2>
         <form
           id="contact"
