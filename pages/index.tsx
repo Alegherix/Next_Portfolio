@@ -7,6 +7,7 @@ import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import PageTransition from '../components/PageTransition';
 import Portfolio from '../components/Portfolio';
+import Test from '../components/Test';
 import Wrapper from '../components/Wrapper';
 
 export default function Home() {
@@ -20,9 +21,11 @@ export default function Home() {
         <Navbar />
         <Hero />
       </Wrapper>
+      {/* <Test /> */}
       <About />
       <PageTransition />
       <Portfolio />
+      <Test />
       <Contact />
       <Footer />
     </div>

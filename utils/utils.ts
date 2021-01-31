@@ -17,4 +17,34 @@ function defaultVariant(y = 20, delay = 0.2, duration = 0.4): Variants {
   };
 }
 
+export const slideVariant = {
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+  hidden: {
+    opacity: 0,
+    x: -30,
+  },
+};
+
+export const containerVariant = {
+  visible: {
+    opacity: 1,
+    transition: { duration: 1, delayChilden: 0.4, staggerChildren: 0.2 },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};
+
+export const listItem = {
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, delayChilden: 0.2, staggerChildren: 0.1 },
+  },
+  hidden: { opacity: 0, x: -30 },
+};
+
 export default defaultVariant;

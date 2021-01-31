@@ -1,10 +1,13 @@
 import React from 'react';
 
-interface TestProps {}
-
-const Test: React.FC<TestProps> = ({}) => {
+const Test: React.FC = () => {
   return (
-    <div className="h-20 w-screen bg-night border-b-4 border-hearth relative"></div>
+    <div
+      className="h-2 w-screen shadow-light"
+      style={{
+        background: 'linear-gradient(180deg, #C70031 0%, #FF3A6B 52.6%)',
+      }}
+    ></div>
   );
 };
 

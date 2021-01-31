@@ -1,12 +1,14 @@
-import React from 'react';
-import { IconType } from 'react-icons/lib';
-import { AiFillSafetyCertificate, AiOutlineCodepen } from 'react-icons/ai';
-import { SiTypescript } from 'react-icons/si';
-import Wrapper from './Wrapper';
+import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
+import React from 'react';
+import { AiFillSafetyCertificate, AiOutlineCodepen } from 'react-icons/ai';
 import { FaGlobe } from 'react-icons/fa';
+import { IconType } from 'react-icons/lib';
+import { SiTypescript } from 'react-icons/si';
+import { containerVariant, listItem, slideVariant } from '../utils/utils';
+import AnimationRef from './AnimationRef';
 import { useWindowSize } from './UseWindow';
-import { motion } from 'framer-motion';
+import Wrapper from './Wrapper';
 
 interface IPriority {
   Icon: IconType;
@@ -58,22 +60,44 @@ const priorities: Array<IPriority> = [
 const About: React.FC = () => {
   const { width } = useWindowSize();
 
+  const priorityAnimation = useAnimation();
+  const priorityRef = AnimationRef(priorityAnimation, 225);
+
+  const underlineAnimation = useAnimation();
+  const refers = AnimationRef(underlineAnimation, 150);
+
   return (
     <div id="about" className="bg-moonlight pt-8 md:pt-12">
       <Wrapper color="bg-moonlight">
-        <h2 className="text-center text-5xl mt-8 mb-3">About me</h2>
         <motion.div
-          initial={{ x: '-100vw' }}
-          animate={{ x: 0 }}
-          className="h-1 w-60 bg-teeth mx-auto mb-16"
-        ></motion.div>
-        <div className="grid grid-cols-2 gap-x-2 gap-y-8 justify-items-center lg:grid-cols-4 lg:gap-x-4">
+          ref={refers}
+          animate={underlineAnimation}
+          initial="hidden"
+          variants={slideVariant}
+        >
+          <h2 className="text-center text-5xl mt-8 mb-3">About me</h2>
+          <motion.div
+            className="h-1 w-60 bg-teeth mx-auto mb-16"
+            // style={{
+            //   background: 'linear-gradient(180deg, #C70031 0%, #FF3A6B 52.6%)',
+            // }}
+          ></motion.div>
+        </motion.div>
+        <motion.div
+          ref={priorityRef}
+          animate={priorityAnimation}
+          initial="hidden"
+          variants={containerVariant}
+          className="grid grid-cols-2 gap-x-2 gap-y-8 justify-items-center lg:grid-cols-4 lg:gap-x-4"
+        >
           {priorities.map(({ Icon, title, body }) => {
             return (
-              <Priority key={title} Icon={Icon} body={body} title={title} />
+              <motion.div key={title} variants={listItem}>
+                <Priority Icon={Icon} body={body} title={title} />
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
         <div className="mt-12 flex gap-8 flex-col-reverse md:flex-row md:justify-center md:gap-6 pb-16 lg:mt-20">
           <div className="flex justify-center w-full h-full md:w-80 md:h-80">
@@ -89,7 +113,7 @@ const About: React.FC = () => {
             <h4 className="text-2xl text-center md:text-4xl md:text-left">
               Who am I?
             </h4>
-            <p className="mb-6 leading-8">
+            <p className="mb-6 leading-8 text-sm">
               My name is Martin, I’m a Webdev student currently studying at{' '}
               <span className="text-hearth">Yrgo</span>. At heart I’m a tech
               nerd who loves building new and exciting projects! I spend most of
