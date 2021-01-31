@@ -76,12 +76,12 @@ const About: React.FC = () => {
           variants={slideVariant}
         >
           <h2 className="text-center text-5xl mt-8 mb-3">About me</h2>
-          <motion.div
+          <div
             className="h-1 w-60 bg-teeth mx-auto mb-16"
             // style={{
             //   background: 'linear-gradient(180deg, #C70031 0%, #FF3A6B 52.6%)',
             // }}
-          ></motion.div>
+          ></div>
         </motion.div>
         <motion.div
           ref={priorityRef}
@@ -98,7 +98,6 @@ const About: React.FC = () => {
             );
           })}
         </motion.div>
-
         <div className="mt-12 flex gap-8 flex-col-reverse md:flex-row md:justify-center md:gap-6 pb-16 lg:mt-20">
           <div className="flex justify-center w-full h-full md:w-80 md:h-80">
             <Image
@@ -109,16 +108,18 @@ const About: React.FC = () => {
               quality={100}
             />
           </div>
-          <div className="w-full md:w-96">
+          <div className="w-full md:w-96 lg:w-101">
             <h4 className="text-2xl text-center md:text-4xl md:text-left">
               Who am I?
             </h4>
-            <p className="mb-6 leading-8 text-sm">
-              My name is Martin, I’m a Webdev student currently studying at{' '}
-              <span className="text-hearth">Yrgo</span>. At heart I’m a tech
-              nerd who loves building new and exciting projects! I spend most of
-              my spare time coding on hobby projects and learning new
-              technologies. As for favorite tech, I’m very passionate about{' '}
+            <p className="mb-6 text-sm md:text-base tracking-wide leading-6">
+              I'm Martin, a Webdev student currently studying at{' '}
+              <span className="text-hearth">Yrgo</span>. In a sentence, I'm a
+              huge tech nerd who loves to fiddle around with code and build new
+              & exciting projects! Most of my spare time is spent programming on
+              hobby projects and learning new technologies. When I'm not coding,
+              I like to browse Reddit, spend time with my spouse and play with
+              my cat. As for favorite tech, I’m very passionate about{' '}
               <span>GraphQL</span>, <span>JAMstack</span> and{' '}
               <span>Serverless</span>.
             </p>

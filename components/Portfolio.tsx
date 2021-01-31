@@ -11,8 +11,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           <h2 className="text-5xl mb-5 font-bold text-center leading-tight md:leading-none">
             Featured Projects
           </h2>
-          <div className="h-1 w-1/2 md:w-100 bg-teeth mx-auto mb-12"></div>
-
+          <div className="h-1 w-1/2 md:w-100 bg-teeth mx-auto mb-12 rounded-md"></div>
           <Project
             description="This is a hobby project of mine which I started working on when I had a hard time finding a website which would help me create a framework for reaching personal goals."
             vision="The vision of this project is to create a clear and straightforward way of both defining and reaching your goals, aswell as being able to create shared goals with persons close to you."

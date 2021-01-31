@@ -21,15 +21,17 @@ const Project: React.FC<ProjectProps> = ({
 }) => {
   return (
     <>
-      <div className="flex gap-8">
-        <Image
-          className="rounded-md shadow-lg flex-1"
-          src={img}
-          quality={100}
-          layout="intrinsic"
-          width={600}
-          height={500}
-        />
+      <div className="flex flex-col gap-8 lg:flex-row">
+        <div className="flex justify-center w-full h-full lg:justify-end">
+          <Image
+            className="rounded-md shadow-lg flex-1"
+            src={img}
+            quality={100}
+            layout="intrinsic"
+            width={450}
+            height={450}
+          />
+        </div>
         <section className="max-w-3xl">
           <div className="flex items-center gap-3 mb-2">
             <h3 className="text-3xl font-bold">{name}</h3>

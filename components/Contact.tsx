@@ -15,8 +15,14 @@ const Contact: React.FC<ContactProps> = ({}) => {
 
   return (
     <>
-      <div className="my-36 flex items-center flex-col ">
-        <h2 className="text-3xl font-bold mb-6">Get in touch with me</h2>
+      <div className="my-36 flex items-center flex-col px-6">
+        <h2 className="text-5xl font-bold mb-3 text-center">
+          Get in touch with me
+        </h2>
+        <div className="h-1 w-3/4 md:w-101 bg-teeth mx-auto mb-4"></div>
+        <p className="mb-8 text-lg">
+          Have a question, don't hesitate to send me an email
+        </p>
         <form
           id="contact"
           className="flex flex-col w-10/12 max-w-screen-md"

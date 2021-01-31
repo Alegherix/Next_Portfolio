@@ -27,6 +27,7 @@ module.exports = {
       },
       spacing: {
         100: '26rem',
+        101: '32rem',
       },
       boxShadow: {
         light: '0px 4px 4px rgba(255, 58, 107, 0.28)',
