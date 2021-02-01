@@ -105,9 +105,9 @@ const About: React.FC = () => {
             />
           </div>
           <div className="w-full md:w-96 lg:w-101">
-            <h4 className="text-2xl text-center md:text-4xl md:text-left">
+            <h3 className="text-2xl text-center md:text-4xl md:text-left">
               Who am I?
-            </h4>
+            </h3>
             <p className="mb-6 text-sm md:text-base tracking-wide leading-6">
               I'm Martin, a Webdev student currently studying at{' '}
               <span className="text-hearth">Yrgo</span>. In a sentence, I'm a

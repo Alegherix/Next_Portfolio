@@ -41,6 +41,7 @@ const Project: React.FC<ProjectProps> = ({
             <a
               className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
               href={github}
+              aria-label="Github"
             >
               <FaGithub color="#C5C6C7" fontSize="1.6rem" />
             </a>
