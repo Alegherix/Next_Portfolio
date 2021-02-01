@@ -1,25 +1,19 @@
+import { motion } from 'framer-motion';
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import containerVariant from '../utils/utils';
-import { useRouter } from 'next/router';
 
-const pathVariants = {
-  hidden: {
-    // opacity: 0
-    pathLength: 0,
-  },
-  visible: {
-    // opacity: 1,
-    pathLength: 1,
-    transition: {
-      duration: 2,
-      ease: 'easeInOut',
+const TriangleSvg = () => {
+  const pathVariants = {
+    hidden: {
+      pathLength: 0,
     },
-  },
-};
-
-const TestSvg = () => {
-  const router = useRouter();
+    visible: {
+      pathLength: 1,
+      transition: {
+        duration: 2,
+        ease: 'easeInOut',
+      },
+    },
+  };
 
   return (
     <div className="mx-auto flex-1 max-w-6xl">
@@ -171,48 +165,4 @@ const TestSvg = () => {
   );
 };
 
-export const Random = () => {
-  return (
-    <div className="w-60 h-60">
-      <motion.svg
-        viewBox="0 0 505 444"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        variants={pathVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.path
-          d="M1 135L229 1L504 268.5L212.5 443L20 170L229 56M229 56L445 261.5L229 386L72.5 174.5L229 89.5V56Z"
-          stroke="white"
-          strokeWidth="8"
-          variants={pathVariants}
-        />
-      </motion.svg>
-    </div>
-  );
-};
-
-export const SvgM = () => {
-  return (
-    <div className="w-40 h-40">
-      <motion.svg
-        viewBox="0 0 399 447"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        variants={pathVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.path
-          d="M7.5 403.516C20 459.016 50.9998 -12.4839 7.5 2.51598C-35.9998 17.5159 201.855 220.016 201.855 220.016C201.855 220.016 416.066 24.5156 381.565 6.5156C347.064 -11.4843 362.564 448.016 390.565 403.516C418.566 359.016 331.066 440.516 331.066 440.516V130.516L201.855 258.516L62.065 130.016L61.065 440.516C61.065 440.516 -5 348.016 7.5 403.516Z"
-          stroke="white"
-          strokeWidth="5"
-          variants={pathVariants}
-        />
-      </motion.svg>
-    </div>
-  );
-};
-
-export default TestSvg;
+export default TriangleSvg;

@@ -4,7 +4,7 @@ const PageTransition: React.FC = () => {
   return (
     <div className="bg-drapes">
       <div
-        className="h-32 w-screen bg-moonlight"
+        className="h-32 w-full bg-moonlight"
         style={{ clipPath: 'polygon(50% 100%, 0 0, 100% 0)' }}
       ></div>
     </div>

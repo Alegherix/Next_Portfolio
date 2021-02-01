@@ -1,8 +1,8 @@
-import { IoChevronDown } from 'react-icons/io5';
-import { SmoothScrollButton } from './SmoothScroll';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { IoChevronDown } from 'react-icons/io5';
 import defaultVariant from '../utils/utils';
+import { SmoothScrollButton } from './SmoothScroll';
 
 function Hero() {
   return (
