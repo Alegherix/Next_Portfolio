@@ -6,6 +6,7 @@ interface ProjectProps {
   name: string;
   description: string;
   img: string;
+  alt: string;
   technologies: string[];
   vision?: string;
   github: string;
@@ -18,6 +19,7 @@ const Project: React.FC<ProjectProps> = ({
   technologies,
   vision,
   github,
+  alt,
 }) => {
   return (
     <>
@@ -30,6 +32,7 @@ const Project: React.FC<ProjectProps> = ({
             layout="intrinsic"
             width={450}
             height={450}
+            alt={alt}
           />
         </div>
         <section className="max-w-3xl">

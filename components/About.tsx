@@ -98,6 +98,7 @@ const About: React.FC = () => {
             <Image
               className="rounded-md"
               src="/jag.avif"
+              alt="Image of me infront of computer"
               width={width < 768 ? 250 : 330}
               height={250}
               quality={100}

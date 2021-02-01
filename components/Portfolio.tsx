@@ -17,6 +17,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
             vision="The vision of this project is to create a clear and straightforward way of both defining and reaching your goals, aswell as being able to create shared goals with persons close to you."
             name="Vetention"
             img="/32217.jpg"
+            alt="Example image of a project"
             technologies={['Next.js', 'Tailwind']}
             github="https://github.com/Alegherix/house_project"
           />
