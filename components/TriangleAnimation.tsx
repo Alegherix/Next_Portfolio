@@ -2,21 +2,13 @@ import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import TriangleSvg from './TriangleSvg';
 
-interface TriangleAnimationProps {}
-
-const TriangleAnimation: React.FC<TriangleAnimationProps> = ({}) => {
+const TriangleAnimation: React.FC = () => {
   return (
-    <motion.div
-      initial={{ y: 0 }}
-      animate={{
-        y: '-100vh',
-      }}
-      transition={{ delay: 3.2, duration: 1 }}
-    >
-      <div className="h-almostFull flex justify-items-center items-center">
+    <>
+      <div className="h-almostFull w-full flex justify-items-center items-center">
         <TriangleSvg />
       </div>
-      <div className="h-notFull relative mx-auto">
+      <div className="h-notFull mx-auto">
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
           animate={{
@@ -24,12 +16,12 @@ const TriangleAnimation: React.FC<TriangleAnimationProps> = ({}) => {
             x: 0,
           }}
           transition={{ delay: 2, duration: 1.2 }}
-          className="text-center xl:mt-8 text-hearth text-4xl md:text-5xl"
+          className="text-center text-hearth text-4xl lg:text-5xl"
         >
           Martin Hansson
         </motion.h2>
       </div>
-    </motion.div>
+    </>
   );
 };
 

@@ -36,6 +36,9 @@ module.exports = {
         almostFull: '90vh',
         notFull: '10vh',
       },
+      width: {
+        almostWide: '80vw',
+      },
     },
 
     colors: {

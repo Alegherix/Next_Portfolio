@@ -16,7 +16,7 @@ const TriangleSvg = () => {
   };
 
   return (
-    <div className="mx-auto flex-1 max-w-6xl">
+    <div className="mx-auto flex-1 max-w-xl lg:max-w-3xl">
       <motion.svg
         variants={pathVariants}
         initial="hidden"
