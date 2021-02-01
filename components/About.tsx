@@ -76,12 +76,7 @@ const About: React.FC = () => {
           variants={slideVariant}
         >
           <h2 className="text-center text-5xl mt-8 mb-3">About me</h2>
-          <div
-            className="h-1 w-60 bg-teeth mx-auto mb-16"
-            // style={{
-            //   background: 'linear-gradient(180deg, #C70031 0%, #FF3A6B 52.6%)',
-            // }}
-          ></div>
+          <div className="h-1 w-60 bg-teeth mx-auto mb-16"></div>
         </motion.div>
         <motion.div
           ref={priorityRef}

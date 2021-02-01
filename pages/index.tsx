@@ -20,11 +20,9 @@ export default function Home() {
         <Navbar />
         <Hero />
       </Wrapper>
-      {/* <Test /> */}
       <About />
       <PageTransition />
       <Portfolio />
-      {/* <Test /> */}
       <Contact />
       <Footer />
     </div>

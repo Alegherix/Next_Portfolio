@@ -32,6 +32,10 @@ module.exports = {
       boxShadow: {
         light: '0px 4px 4px rgba(255, 58, 107, 0.28)',
       },
+      height: {
+        almostFull: '90vh',
+        notFull: '10vh',
+      },
     },
 
     colors: {

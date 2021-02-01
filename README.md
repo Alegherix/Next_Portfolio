@@ -4,11 +4,11 @@ This is my portfolio, showcasing my current projects that I'm working on aswell 
 
 ## Tech Stack
 
-Next.js
-Typescript
-TailwindCSS
-Framer Motion
-React-Hook-Form
+- Next.js
+- Typescript
+- TailwindCSS
+- Framer Motion
+- React-Hook-Form
 
 ## Running Locally
 

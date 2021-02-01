@@ -43,7 +43,7 @@ function Hero() {
 
             <SmoothScrollButton
               text="View my work "
-              to="portfolio"
+              to="about"
               Icon={IoChevronDown}
             />
           </motion.div>
