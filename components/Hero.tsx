@@ -16,7 +16,6 @@ function Hero() {
           src="/hero.avif"
           layout="fill"
           alt="background image of computer and coffee"
-          priority={true}
         />
         <div className="z-10">
           <motion.h1

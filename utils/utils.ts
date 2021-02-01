@@ -10,7 +10,7 @@ function defaultVariant(y = 20, delay = 0.2, duration = 0.4): Variants {
       y: 0,
       opacity: 1,
       transition: {
-        delay,
+        delay: delay + 3.7, //3.6 used cause of Initial Animation taking 3.2s, so use to smooth out animation
         duration,
       },
     },

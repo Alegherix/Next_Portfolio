@@ -1,25 +1,25 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
-import TriangleAnimation from '../components/TriangleAnimation';
+import Head from 'next/head';
+import React from 'react';
+import About from '../components/About';
+import AnimationHero from '../components/AnimationHero';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+import PageTransition from '../components/PageTransition';
+import Portfolio from '../components/Portfolio';
 
-const home: React.FC = () => {
-  const router = useRouter();
-  const redirect = () => router.push('/home');
-  useEffect(() => {
-    router.prefetch('/');
-  }, []);
-
+export default function Home() {
   return (
-    <motion.div
-      className="w-screen h-screen flex flex-col justify-center items-center"
-      initial={{ y: 0 }}
-      animate={{ y: '-100vh', transition: { delay: 3.2, duration: 1 } }}
-      onAnimationComplete={redirect}
-    >
-      <TriangleAnimation />
-    </motion.div>
+    <div>
+      <Head>
+        <title>Martin Hansson</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <AnimationHero />
+      <About />
+      <PageTransition />
+      <Portfolio />
+      <Contact />
+      <Footer />
+    </div>
   );
-};
-
-export default home;
+}
