@@ -13,7 +13,7 @@ function Hero() {
       >
         <Image
           className="absolute opacity-3"
-          src="/hero.avif"
+          src="/hero.webp"
           layout="fill"
           alt="background image of computer and coffee"
         />

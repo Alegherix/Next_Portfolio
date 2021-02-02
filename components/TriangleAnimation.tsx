@@ -18,7 +18,7 @@ const TriangleAnimation: React.FC = () => {
             x: 0,
           }}
           transition={{ delay: 2, duration: 1.2 }}
-          className="text-center text-hearth text-4xl lg:text-5xl -mt-12 lg:mt-0"
+          className="text-center text-hearth text-4xl md:text-5xl lg:text-7xl -mt-12 lg:mt-0"
         >
           Martin Hansson
         </motion.h2>

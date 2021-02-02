@@ -97,7 +97,7 @@ const About: React.FC = () => {
           <div className="flex justify-center w-full h-full md:w-80 md:h-80">
             <Image
               className="rounded-md"
-              src="/jag.avif"
+              src="/jag.webp"
               alt="Image of me infront of computer"
               width={width < 768 ? 250 : 330}
               height={250}

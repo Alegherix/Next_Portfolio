@@ -51,6 +51,7 @@ module.exports = {
       giant: '#FC0E49',
       blood: '#D10337',
       hearth: '#FF3A6B',
+      white: '#fff',
     },
   },
   variants: {

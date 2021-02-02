@@ -21,7 +21,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
         </h2>
         <div className="h-1 w-3/4 md:w-101 bg-teeth mx-auto mb-4"></div>
         <p className="mb-8 text-lg">
-          Have a question, don't hesitate to send me an email
+          Have a question, don't hesitate to send me an email.
         </p>
         <form
           id="contact"
