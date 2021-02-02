@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 interface ContactProps {}
@@ -10,8 +10,36 @@ interface IFormInput {
 }
 
 const Contact: React.FC<ContactProps> = ({}) => {
-  const { register, handleSubmit, watch, errors } = useForm<IFormInput>();
-  const onSubmit = (data: IFormInput) => console.log(data);
+  const [mail, setMail] = useState(false);
+  const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMail(false);
+    }, 7000);
+  }, [mail]);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    errors,
+    reset,
+  } = useForm<IFormInput>();
+
+  const onSubmit = async (data: IFormInput) => {
+    const res = await fetch('/api/sendmail', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'Application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    const text = await res.text();
+    reset();
+    setMail(true);
+    setMessage(text);
+  };
 
   return (
     <>
@@ -73,9 +101,12 @@ const Contact: React.FC<ContactProps> = ({}) => {
               <span className="error">This field is required</span>
             )}
           </div>
-          <button className="btn mt-6" type="submit">
-            Send
-          </button>
+          <div className="div flex w-full justify-between mt-6">
+            <button className="btn justify-self-center" type="submit">
+              Send
+            </button>
+            {mail && <p className="text-xl">{message}</p>}
+          </div>
         </form>
       </div>
     </>
