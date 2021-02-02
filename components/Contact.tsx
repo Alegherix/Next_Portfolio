@@ -28,6 +28,10 @@ const Contact: React.FC<ContactProps> = ({}) => {
   } = useForm<IFormInput>();
 
   const onSubmit = async (data: IFormInput) => {
+    reset();
+    setMail(true);
+    setMessage('Sending Mail...');
+
     const res = await fetch('/api/sendmail', {
       method: 'POST',
       headers: {
@@ -36,8 +40,6 @@ const Contact: React.FC<ContactProps> = ({}) => {
       body: JSON.stringify(data),
     });
     const text = await res.text();
-    reset();
-    setMail(true);
     setMessage(text);
   };
 
