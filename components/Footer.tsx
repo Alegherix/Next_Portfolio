@@ -2,6 +2,7 @@ import React from 'react';
 import { IconType } from 'react-icons';
 import {
   FaChevronUp,
+  FaCodepen,
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
@@ -26,9 +27,9 @@ const icons: SocialMedia[] = [
     label: 'Instagram',
   },
   {
-    Icon: FaYoutube,
-    url: 'https://www.youtube.com/channel/UCDk7JqZdFp2PUpOW0Ea2KKA',
-    label: 'Youtube',
+    Icon: FaCodepen,
+    url: 'https://codepen.io/alegherix',
+    label: 'Codepen',
   },
 ];
 
