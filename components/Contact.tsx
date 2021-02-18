@@ -55,7 +55,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
         </p>
         <form
           id="contact"
-          className="flex flex-col w-10/12 max-w-screen-md"
+          className="flex flex-col w-full max-w-screen-md"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex flex-col gap-3 mb-4 md:flex-row md:gap-10 md:mb-10">
