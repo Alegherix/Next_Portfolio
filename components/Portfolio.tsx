@@ -13,7 +13,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           </h2>
           <div className="h-1 w-1/2 md:w-100 bg-teeth mx-auto mb-12 rounded-md"></div>
           <section className="flex flex-col gap-20 lg:gap-32">
-            <Project
+            {/* <Project
               description="This is a hobby project of mine which I started working on when I had a hard time finding a website which would help me create a framework for reaching personal goals."
               vision="The vision of this project is to create a clear and straightforward way of both defining and reaching your goals, aswell as being able to create shared goals with persons close to you."
               name="Vetention"
@@ -31,6 +31,24 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
                 'Firebase Authentication',
               ]}
               github="https://github.com/Alegherix/goalsharing"
+            />         */}
+
+            <Project
+              description='A website for the uppcoming event "Kul med djur", which is a fictional event aimed at inviting customers and potential customers to a day at delsjön to learn more about taking care of their pets.'
+              vision="The vision of this project was to create something fun and exciting by using a layout with warm colors and wavy section separation."
+              name="Kul med djur"
+              img="/trees.svg"
+              alt="Example image of trees from the project"
+              technologies={[
+                'Next.js',
+                'TailwindCSS',
+                'Typescript',
+                'Vercel',
+                'Framer Motion',
+                'Immer',
+              ]}
+              github="https://github.com/Alegherix/wuip"
+              href="https://wuip.vercel.app"
             />
             <Project
               description="This is a project for being able to safely create an account, add houses to a map, and persist it for other people to see."
