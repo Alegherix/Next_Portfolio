@@ -59,10 +59,10 @@ const Project: React.FC<ProjectProps> = ({
           <p className="mb-4">{description}</p>
           {vision && <p>{vision}</p>}
           <h4 className="text-2xl font-bold mt-6">Technologies used</h4>
-          <div className="grid grid-cols-2 max-w-sm">
+          <div className="grid grid-cols-2 ">
             {technologies.map((technology) => {
               return (
-                <p className="w-1/2 inline-block" key={technology}>
+                <p className="w-full inline-block" key={technology}>
                   {technology}
                 </p>
               );

@@ -13,25 +13,25 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           </h2>
           <div className="h-1 w-1/2 md:w-100 bg-teeth mx-auto mb-12 rounded-md"></div>
           <section className="flex flex-col gap-20 lg:gap-32">
-            {/* <Project
-              description="This is a hobby project of mine which I started working on when I had a hard time finding a website which would help me create a framework for reaching personal goals."
-              vision="The vision of this project is to create a clear and straightforward way of both defining and reaching your goals, aswell as being able to create shared goals with persons close to you."
-              name="Vetention"
-              img="/goalshare.svg"
+            <Project
+              description="This is a project with the purpose of making it easier to track locations of where you've found forages such as mushrooms, berries etc.. whenever you're out in the forrest."
+              vision="The main goal was to make it easy to find your location of wherever you are, easily add the kind of forage you found, aswell as optionally adding images of the location for future reference, everything persisted in the cloud."
+              name="Forager"
+              img="/forager2.webp"
               alt="Example image of a project"
               technologies={[
-                'Next.js',
+                'React',
                 'TailwindCSS',
                 'Typescript',
-                'TypeGraphQL',
-                'Apollo',
-                'GraphQL',
-                'Postgres',
-                'Prisma',
-                'Firebase Authentication',
+                'Google Maps API',
+                'Firebase Auth',
+                'Firestore Database',
+                'Google Cloud Storage',
+                'Vercel',
               ]}
-              github="https://github.com/Alegherix/goalsharing"
-            />         */}
+              github="https://github.com/Alegherix/forager"
+              href="https://forager-phi.vercel.app"
+            />
 
             <Project
               description='A website for the uppcoming event "Kul med djur", which is a fictional event aimed at inviting customers and potential customers to a day at delsjön to learn more about taking care of their pets.'
@@ -46,11 +46,12 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
                 'Vercel',
                 'Framer Motion',
                 'Immer',
+                'Google Maps API',
               ]}
               github="https://github.com/Alegherix/wuip"
               href="https://wuip.vercel.app"
             />
-            <Project
+            {/* <Project
               description="This is a project for being able to safely create an account, add houses to a map, and persist it for other people to see."
               vision="The main idea behind this project was to get a deeper understanding of implementing Firebase Authentication aswell as persisting data with a GraphQL backed API."
               name="House Finder"
@@ -68,7 +69,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
                 'Cloudinary',
               ]}
               github="https://github.com/Alegherix/house_project"
-            />
+            /> */}
 
             <Project
               description="This was my first serious attempt at a portfolio written entirely in Gatsby. This Project leverages Static Site Generation to reduce loadtimes and improve Search Engine Optimization."
