@@ -1,6 +1,17 @@
 import { Variants } from 'framer-motion/types/types';
 
+const getPersistedData = (key: string): boolean | null => {
+  const value: boolean | null = JSON.parse(localStorage.getItem(key));
+  return value;
+};
+
 function defaultVariant(y = 20, delay = 0.2, duration = 0.4): Variants {
+  let svgDelay = delay + 3.7;
+
+  if (typeof window !== 'undefined') {
+    svgDelay = getPersistedData('SVG') ? 0.2 : delay + 3.7;
+  }
+
   return {
     init: {
       y,
@@ -10,7 +21,7 @@ function defaultVariant(y = 20, delay = 0.2, duration = 0.4): Variants {
       y: 0,
       opacity: 1,
       transition: {
-        delay: delay + 3.7, //3.6 used cause of Initial Animation taking 3.2s, so use to smooth out animation
+        delay: svgDelay, //3.6 used cause of Initial Animation taking 3.2s, so use to smooth out animation
         duration,
       },
     },
