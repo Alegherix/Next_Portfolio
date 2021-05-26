@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Wrapper from './Wrapper';
 import { motion } from 'framer-motion';
+import { getPersistedData } from '../utils/utils';
 
 interface IShownSvg {
   key: 'SVG';
@@ -15,11 +16,6 @@ const AnimationHero: React.FC = () => {
 
   const setData = ({ key, value }: IShownSvg) => {
     localStorage.setItem(key, value.toString());
-  };
-
-  const getPersistedData = (key: string): boolean | null => {
-    const value: boolean | null = JSON.parse(localStorage.getItem(key));
-    return value;
   };
 
   // Have to wrap in useEffect to prevent undefined from localStorage,

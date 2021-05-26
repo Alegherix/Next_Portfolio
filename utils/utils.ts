@@ -1,6 +1,6 @@
 import { Variants } from 'framer-motion/types/types';
 
-const getPersistedData = (key: string): boolean | null => {
+export const getPersistedData = (key: string): boolean | null => {
   const value: boolean | null = JSON.parse(localStorage.getItem(key));
   return value;
 };
