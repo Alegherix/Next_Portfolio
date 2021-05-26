@@ -14,6 +14,25 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           <div className="h-1 w-1/2 md:w-100 bg-teeth mx-auto mb-12 rounded-md"></div>
           <section className="flex flex-col gap-20 lg:gap-32">
             <Project
+              description="This is a 3D Game written in Three.js where you're a ball exploring the world, jumping over obstacles, and scoring points in 3 different maps, all the way until you reach the diamond at the end of the map."
+              vision="The main goal of this project was to further my knowledge with Three.js aswell as exploring other techonologies such as Svelte. Typescript is used all throughout the entire stack to ensure typesafety. Socket.io was also utilized to make the last map a multiplayer map to spice things up even further."
+              name="World Explorer"
+              img="/explorer.webp"
+              alt="Example image of a project"
+              technologies={[
+                'Three.js',
+                'Cannon.js',
+                'Typescript',
+                'Svelte',
+                'Socket.io',
+                'Firestore Database',
+                'Netlify',
+              ]}
+              github="https://github.com/Alegherix/world_explorer"
+              href="https://worldexploration.netlify.app"
+            />
+
+            <Project
               description="This is a project with the purpose of making it easier to track locations of where you've found forages such as mushrooms, berries etc.. whenever you're out in the forrest."
               vision="The main goal was to make it easy to find your location of wherever you are, easily add the kind of forage you found, aswell as optionally adding images of the location for future reference, everything persisted in the cloud."
               name="Forager"
