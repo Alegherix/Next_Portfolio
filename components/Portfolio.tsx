@@ -14,6 +14,25 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           <div className="h-1 w-1/2 md:w-100 bg-teeth mx-auto mb-12 rounded-md"></div>
           <section className="flex flex-col gap-20 lg:gap-32">
             <Project
+              description="This application was written as a freelance contract to help the swedish real estate agency Higab create a platform to launch their new project Bagih."
+              vision="The main goal of this project was to create an application where the users could buy a membership, and then use the application to book seating slots in their coworking space, book meeting rooms, aswell as sign up for events hosted by Bagih. There was also a a big emphasize on creating a working administrative tool to allow for administrating members, create upcoming events etc..."
+              name="World Explorer"
+              img="/Bagih.webp"
+              alt="Example image of a project"
+              technologies={[
+                'React',
+                'TailwindCSS',
+                'Typescript',
+                'Jest',
+                'Laravel',
+                'Inertia.js',
+                'Postgres',
+              ]}
+              github="https://github.com/Alegherix"
+              href="https://bagih.se"
+            />
+
+            <Project
               description="This is a 3D Game written in Three.js where you're a ball exploring the world, jumping over obstacles, and scoring points in 3 different maps, all the way until you reach the diamond at the end of the map."
               vision="The main goal of this project was to further my knowledge with Three.js aswell as exploring other techonologies such as Svelte. Typescript is used all throughout the entire stack to ensure typesafety. Socket.io was also utilized to make the last map a multiplayer map to spice things up even further."
               name="World Explorer"
