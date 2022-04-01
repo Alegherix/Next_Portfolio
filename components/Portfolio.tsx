@@ -16,9 +16,9 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
             <Project
               description="This application was written as a freelance contract to help the swedish real estate agency Higab create a platform to launch their new project Bagih."
               vision="The main goal of this project was to create an application where the users could buy a membership, and then use the application to book seating slots in their coworking space, book meeting rooms, aswell as sign up for events hosted by Bagih. There was also a a big emphasize on creating a working administrative tool to allow for administrating members, create upcoming events etc..."
-              name="World Explorer"
+              name="Bagih"
               img="/Bagih.webp"
-              alt="Example image of a project"
+              alt="Bagih project"
               technologies={[
                 'React',
                 'TailwindCSS',
@@ -56,7 +56,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
               vision="The main goal was to make it easy to find your location of wherever you are, easily add the kind of forage you found, aswell as optionally adding images of the location for future reference, everything persisted in the cloud."
               name="Forager"
               img="/forager2.webp"
-              alt="Example image of a project"
+              alt="Forager application"
               technologies={[
                 'React',
                 'TailwindCSS',
@@ -89,31 +89,11 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
               github="https://github.com/Alegherix/wuip"
               href="https://wuip.vercel.app"
             />
-            {/* <Project
-              description="This is a project for being able to safely create an account, add houses to a map, and persist it for other people to see."
-              vision="The main idea behind this project was to get a deeper understanding of implementing Firebase Authentication aswell as persisting data with a GraphQL backed API."
-              name="House Finder"
-              img="/House.webp"
-              alt="Example image of a project"
-              technologies={[
-                'Next.js',
-                'TailwindCSS',
-                'Typescript',
-                'TypeGraphQL',
-                'Apollo',
-                'Prisma',
-                'Firebase Authentication',
-                'Mapbox',
-                'Cloudinary',
-              ]}
-              github="https://github.com/Alegherix/house_project"
-            /> */}
-
             <Project
               description="This was my first serious attempt at a portfolio written entirely in Gatsby. This Project leverages Static Site Generation to reduce loadtimes and improve Search Engine Optimization."
               name="Gatsby Portfolio"
               img="/gatsby.webp"
-              alt="Example image of a project"
+              alt="Image of my first portfolio"
               technologies={[
                 'Gatsby',
                 'GraphQL',
@@ -130,7 +110,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
               description="This was a School project made at Yrgo, to create a landing page for a fictional release of a new electric vehicle."
               name="Electric"
               img="/blueTerra.webp"
-              alt="Example image of a project"
+              alt="First school project"
               technologies={['HTML', 'CSS', 'Javascript', 'GSAP', 'Barba.js']}
               github="https://github.com/Alegherix/ElectricCar"
               href="https://yrgoelectric.netlify.app"
